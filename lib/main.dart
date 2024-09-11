@@ -1,15 +1,28 @@
+import 'package:ecommerce/core/constants/const_colors.dart';
+import 'package:ecommerce/views/screens/onboarding.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const EcommerceApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+class EcommerceApp extends StatelessWidget {
+  const EcommerceApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) => GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark().copyWith(
+          scaffoldBackgroundColor: ConstColors.mainColor,
+        ),
+        home: const OnBoarding(),
+      ),
+    );
   }
 }
