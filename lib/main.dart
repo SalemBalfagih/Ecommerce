@@ -1,5 +1,6 @@
 import 'package:ecommerce/core/constants/const_colors.dart';
-import 'package:ecommerce/views/screens/onboarding.dart';
+import 'package:ecommerce/routes.dart';
+import 'package:ecommerce/views/screens/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -21,7 +22,8 @@ class EcommerceApp extends StatelessWidget {
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: ConstColors.mainColor,
         ),
-        home: const OnBoarding(),
+        home: const OnBoardingView(),
+        routes: routes,
       ),
     );
   }

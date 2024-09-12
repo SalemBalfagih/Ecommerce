@@ -1,8 +1,10 @@
+import 'package:ecommerce/controllers/onboarding_controller.dart';
 import 'package:ecommerce/data/source/static_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
-class CustomPageView extends StatelessWidget {
+class CustomPageView extends GetView<OnboardingController> {
   const CustomPageView({
     super.key,
   });
@@ -10,6 +12,10 @@ class CustomPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
+      onPageChanged: (value) {
+        controller.changePage(value);
+      },
+      controller: controller.pageController,
       itemCount: onBoardindList.length,
       itemBuilder: (context, index) {
         return Column(
