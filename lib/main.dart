@@ -20,6 +20,15 @@ class EcommerceApp extends StatelessWidget {
       builder: (context, child) => GetMaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
+          textTheme: TextTheme(
+              bodySmall: TextStyle(
+                  fontSize: 15.sp,
+                  fontFamily: "Cairo",
+                  color: ConstColors.grey),
+              headlineLarge: TextStyle(
+                  fontSize: 25.sp,
+                  fontFamily: "Cairo",
+                  fontWeight: FontWeight.bold)),
           scaffoldBackgroundColor: ConstColors.mainColor,
         ),
         home: const OnBoardingView(),

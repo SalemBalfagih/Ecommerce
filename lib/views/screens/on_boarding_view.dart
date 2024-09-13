@@ -21,7 +21,7 @@ class OnBoardingView extends GetView<OnboardingController> {
       body: SafeArea(
         child: Column(
           children: [
-            Expanded(flex: 3, child: CustomPageView()),
+            const Expanded(flex: 3, child: CustomPageView()),
             Expanded(
                 child: Column(
               children: [

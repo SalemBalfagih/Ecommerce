@@ -34,15 +34,11 @@ class CustomPageView extends GetView<OnboardingController> {
             ),
             Text(
               onBoardindList[index].title,
-              style: TextStyle(
-                fontSize: 30.h,
-              ),
+              style: Theme.of(context).textTheme.headlineLarge,
             ),
             Text(
               onBoardindList[index].body,
-              style: TextStyle(
-                fontSize: 20.sp,
-              ),
+              style: Theme.of(context).textTheme.bodySmall,
             ),
             const Spacer(
               flex: 4,
