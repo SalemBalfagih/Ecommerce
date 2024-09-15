@@ -9,7 +9,7 @@ class OnboardingController extends GetxController {
   next() {
     currentPage++;
     if (currentPage > onBoardindList.length - 1) {
-      Get.offAllNamed(ConstRoute.login);
+      Get.offAllNamed(ConstRoute.singUp);
     }
     pageController.animateToPage(currentPage,
         duration: const Duration(milliseconds: 900), curve: Curves.easeInOut);

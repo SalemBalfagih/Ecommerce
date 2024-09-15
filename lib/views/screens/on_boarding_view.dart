@@ -19,23 +19,41 @@ class OnBoardingView extends GetView<OnboardingController> {
     // ignore: prefer_const_constructors
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            const Expanded(flex: 3, child: CustomPageView()),
-            Expanded(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              const Expanded(
+                flex: 2,
+                child: CustomPageView(),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.10,
+              ),
+              Expanded(
                 child: Column(
-              children: [
-                CustomAnimatedContainer(),
-                Spacer(),
-                CustomButton(
-                  () {
-                    controller.next();
-                  },
+                  children: [
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.05,
+                    ),
+                    const CustomAnimatedContainer(),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.05,
+                    ),
+                    CustomButton(
+                      text: "next",
+                      onPressed: () {
+                        controller.next();
+                      },
+                    ),
+                  ],
                 ),
-                Spacer(),
-              ],
-            ))
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -20,18 +20,15 @@ class CustomPageView extends GetView<OnboardingController> {
       itemBuilder: (context, index) {
         return Column(
           children: [
-            const Spacer(
-              flex: 1,
+            Expanded(
+              child: Image.asset(
+                onBoardindList[index].image,
+                height: 250.h,
+                width: 250.w,
+                fit: BoxFit.fill,
+              ),
             ),
-            Image.asset(
-              onBoardindList[index].image,
-              height: 260.h,
-              width: 250.w,
-              fit: BoxFit.fill,
-            ),
-            const Spacer(
-              flex: 1,
-            ),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
             Text(
               onBoardindList[index].title,
               style: Theme.of(context).textTheme.headlineLarge,
@@ -40,9 +37,6 @@ class CustomPageView extends GetView<OnboardingController> {
               onBoardindList[index].body,
               style: Theme.of(context).textTheme.bodySmall,
             ),
-            const Spacer(
-              flex: 4,
-            )
           ],
         );
       },

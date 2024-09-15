@@ -22,8 +22,8 @@ class CustomAnimatedContainer extends StatelessWidget {
                     return AnimatedContainer(
                       margin: const EdgeInsets.all(4),
                       color: controller.currentPage != index
-                          ? ConstColors.grey
-                          : ConstColors.white,
+                          ? ConstColors.white
+                          : ConstColors.blue,
                       height: 15.h,
                       width: controller.currentPage != index ? 15.w : 18.w,
                       duration: const Duration(

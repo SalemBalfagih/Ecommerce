@@ -1,14 +1,11 @@
 import 'package:ecommerce/core/constants/const_colors.dart';
-import 'package:ecommerce/core/constants/const_image.dart';
 import 'package:ecommerce/views/widgets/custom_account.dart';
 import 'package:ecommerce/views/widgets/custom_button.dart';
-import 'package:ecommerce/views/widgets/custom_image.dart';
 import 'package:ecommerce/views/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class SignUpView extends StatelessWidget {
+  const SignUpView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,16 +18,10 @@ class LoginView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-              CustomImage(
-                imageName: ConstImage.login,
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
+                height: MediaQuery.of(context).size.height * 0.1,
               ),
               Text(
-                "Sign In",
+                "sign up",
                 style: Theme.of(context).textTheme.headlineLarge,
               ),
               Text("Welcome back",
@@ -39,8 +30,22 @@ class LoginView extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               const CustomTextFormField(
+                hintText: 'username',
+                icon: Icons.person,
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              const CustomTextFormField(
                 hintText: 'email',
                 icon: Icons.email_outlined,
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              const CustomTextFormField(
+                hintText: 'phone',
+                icon: Icons.phone_android_outlined,
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
@@ -53,15 +58,15 @@ class LoginView extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               CustomButton(
-                text: "Login",
+                text: 'sign up',
                 onPressed: () {},
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               const CustomAccount(
-                text1: "Don't have an account?",
-                text2: "Sign up",
+                text1: "Already have an account?",
+                text2: "Login",
               ),
             ],
           ),
